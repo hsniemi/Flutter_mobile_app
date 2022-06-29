@@ -57,7 +57,7 @@ class _ShowPlaceOnMapState extends State<ShowPlaceOnMap> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('paikka kartalla'),
+        title: const Text('Paikka kartalla'),
       ),
       //Create a map view with markers showing selected place location
       //and users current location.
