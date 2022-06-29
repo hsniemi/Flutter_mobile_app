@@ -19,7 +19,9 @@ Painamalla ”muokkaa” tekstiä kortin oikeassa yläkulmassa avautuu näkymä,
 
 Omat keräilykohteet -näkymässä ylätyökalurivin hampurilaiskuvakkeesta avautuu sivuvalikko, jossa on teksitipainikkeet: Sijainti, Omat keräilypaikat ja Säätiedot. 
 
-![sivuvalikko](images/sivuvalikko.png)
+Painamalla Säätiedot-painiketta sivuvalikossa, avautuu Sää-näkymä, jossa käyttäjä voi hakea säätietoja kirjoittamalla kaupungin nimen yläreunan tekstikenttään. Näkymässä näytetään sen hetkinen säätieto: sääkuvake, lämpötila, sääkuvaus, tuulennopeus, ilmankosteus ja lämpötilan tuntuma. Alareunassa on vaakasuunnassa skrollattavana listana kolmen päivän ennuste päiväkortteina, joissa esitetään sääkuvake, päivän ylin- ja alin lämpötila, sateen todennäköisyys ja maksimi tuulennopeus. Säänäkymän toteutuksessa on käytetty Weather api -palvelua (https://www.weatherapi.com/ ).  Säätiedot haetaan http-pyyntöinä, ja vastaus palvelusta tulee json-muodossa.
+
+![sivuvalikko](images/sivuvalikko.png) ![Sää](images/saa.png)
 
 Painamalla Sijaintipainiketta avautuu karttanäkymä, jossa näytetään käyttäjän sijainti kartalla. Karttanäkymä ja sijainnin seuranta on toteutettu käyttäen Google Maps -palvelua. Sijaintisi-näkymässä käyttäjä voi tallentaa sijaintitietonsa antamalla otsikon, joka on pakollinen kenttä, sekä halutessaan kuvauksen sijaintitiedolle ja painamalla Tallenna paikkatieto -painiketta. Paikkatiedon otsikko, kuvaus ja koordinaatit tallennetaan laitteen muistiin SQLite-tietokantaan. 
 
@@ -27,7 +29,7 @@ Painamalla sivuvalikossa Omat keräilypaikat painiketta käyttäjä voi tarkaste
 
 KUVA
 
-Painamalla Säätiedot-painiketta sivuvalikossa avautuu Sää-näkymä, jossa käyttäjä voi hakea säätietoja kirjoittamalla kaupungin nimen yläreunan tekstikenttään. Näkymässä näytetään sen hetkinen säätieto: sääkuvake, lämpötila, sääkuvaus, tuulennopeus, ilmankosteus ja lämpötilan tuntuma. Alareunassa on vaakasuunnassa skrollattavana listana kolmen päivän ennuste päiväkortteina, joissa esitetään sääkuvake, päivän ylin- ja alin lämpötila, sateen todennäköisyys ja maksimi tuulennopeus. Säänäkymän toteutuksessa on käytetty Weather api -palvelua (https://www.weatherapi.com/ ).  Säätiedot haetaan http-pyyntöinä, ja vastaus palvelusta tulee json-muodossa.
 
-![Sää](images/saa.png)
+
+
 
