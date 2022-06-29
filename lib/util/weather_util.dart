@@ -1,3 +1,4 @@
+import 'package:flutter_config/flutter_config.dart';
 import 'package:intl/intl.dart';
 
 /*
@@ -5,7 +6,7 @@ This class contains a helper method for formatting the date to for example: "Maa
 */
 
 class WeatherUtil {
-  static String apiKey = 'fde728f24d594737a51155642222402';
+  static String apiKey = FlutterConfig.get('WEATHER_API_KEY');
 
   static String getFormattedDate(DateTime dateTime) {
     String day = DateFormat('EEEE').format(dateTime);
