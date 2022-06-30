@@ -5,7 +5,7 @@ import 'package:flutter_app_summer_project/model/pickable.dart';
 class PickableListProvider with ChangeNotifier {
   List<Pickable> _pickableList = [];
 
-//A getter method that returns a copy of _pickableList.
+  //A getter method that returns a copy of _pickableList.
   List<Pickable> get pickableList => [..._pickableList];
 
   int get length => _pickableList.length;

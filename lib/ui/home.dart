@@ -63,9 +63,10 @@ class _PickableListViewState extends State<PickableListView> {
 
   @override
   Widget build(BuildContext context) {
-    // List<Pickable> pickableItemsList =
-    //     context.watch<PickableListProvider>().pickableList;
-    // debugPrint('$pickableItemsList');
+    List<Pickable> pickableItemsList =
+        Provider.of<PickableListProvider>(context).pickableList;
+
+    debugPrint('Provider.of test $pickableItemsList');
     final theme = Theme.of(context);
     return Scaffold(
       drawer: Drawer(
@@ -292,46 +293,49 @@ class _PickableListViewState extends State<PickableListView> {
 //Methods for manipulating the list of Pickables. They call in turn for methods
 //in the PickableListProvider class, which notify listeners about changes.
   void initializeList(List<Pickable> list) {
-    context.read<PickableListProvider>().setPickableList(list);
+    Provider.of<PickableListProvider>(context, listen: false)
+        .setPickableList(list);
   }
 
   void _createPickable(Pickable pickable) {
-    context.read<PickableListProvider>().addPickableListItem(pickable);
+    Provider.of<PickableListProvider>(context, listen: false)
+        .addPickableListItem(pickable);
     Navigator.pop(context);
   }
 
+  //Kutsutaan provider-luokan metodia alkion poistamiseksi listasta.
   void _deleteItem(Pickable item) {
-    context.read<PickableListProvider>().removePickableListItem(item);
+    Provider.of<PickableListProvider>(context, listen: false)
+        .removePickableListItem(item);
   }
 
   void _addToHistory(Pickable item, PickableHistory historyItem) {
-    context.read<PickableListProvider>().addHistoryItem(item, historyItem);
+    Provider.of<PickableListProvider>(context, listen: false)
+        .addHistoryItem(item, historyItem);
   }
 
   void _updateHistory(
       Pickable pickable, PickableHistory historyItem, int index) {
-    context
-        .read<PickableListProvider>()
+    Provider.of<PickableListProvider>(context, listen: false)
         .updateHistoryItem(pickable, historyItem, index);
   }
 
   void _deleteHistoryItem(Pickable pickable, PickableHistory history) {
-    context
-        .read<PickableListProvider>()
+    Provider.of<PickableListProvider>(context, listen: false)
         .removePickableHistoryItem(pickable, history);
   }
 
   void _savePlace(Place place) {
-    context.read<MyLocations>().addPlace(place);
+    Provider.of<MyLocations>(context, listen: false).addPlace(place);
     Navigator.pop(context);
   }
 
   void getAndSetPlaces(list) async {
-    context.read<MyLocations>().setPlaceList(list);
+    Provider.of<MyLocations>(context, listen: false).setPlaceList(list);
   }
 
   void _deletePlace(Place place) {
-    context.read<MyLocations>().deletePlace(place);
+    Provider.of<MyLocations>(context, listen: false).deletePlace(place);
   }
 
   AlertDialog showAlertDialog(

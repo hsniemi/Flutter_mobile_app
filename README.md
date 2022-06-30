@@ -27,7 +27,7 @@ Painamalla sivuvalikossa Sijaintipainiketta avautuu karttanäkymä, jossa näyte
 
 Painamalla sivuvalikossa Omat keräilypaikat painiketta käyttäjä voi tarkastella tallentamiaan paikkatietoja. Omat keräilypaikat -näkymässä on lista tallennetuista paikoista. Paikkatiedon voi poistaa painamalla roskakorikuvaketta. Painamalla karttakuvaketta avautuu karttanäkymä, jossa näytetään tallennettu paikka kartalla, sekä käyttäjän sijainti kartalla.
 
-KUVA
+![paikat](images/paikat_sivut.png)
 
 
 
