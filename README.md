@@ -30,7 +30,7 @@ Painamalla sivuvalikossa Omat keräilypaikat painiketta käyttäjä voi tarkaste
 ![paikat](images/paikat_sivut.png)
 
 
-###Käyttöönotto
+### Käyttöönotto
 Ajaaksesi sovellusta emulaattorissa tai laitteessa kloonaa repositorio ja lataa projektiin tarvittavat paketit ajamalla terminaalissa komento flutter pub get.
 
 Jotta sovelluksessa voi käyttää paikannusominaisuuksia täytyy projektiin lisätä Maps API Key, jota varten täytyy luoda tili Google maps platform -palveluun (https://mapsplatform.google.com/). Säätietojen näyttämistä varten täytyy lisätä api-avain, jonka saa luomalla tilin Weather API -palveluun (https://www.weatherapi.com/).
