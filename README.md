@@ -36,7 +36,7 @@ Ajaaksesi sovellusta emulaattorissa tai laitteessa kloonaa repositorio ja lataa 
 Jotta sovelluksessa voi käyttää paikannusominaisuuksia täytyy projektiin lisätä Maps API Key, jota varten täytyy luoda tili Google maps platform -palveluun (https://mapsplatform.google.com/). Säätietojen näyttämistä varten täytyy lisätä api-avain, jonka saa luomalla tilin Weather API -palveluun (https://www.weatherapi.com/).
 
 Luo projektikansion juureen tiedosto nimeltä .env ja lisätä siihen api-avaimet seuraavalla tavalla:
-API_KEY=tähän_google_api_key
+API_KEY=tähän_google_api_key  
 WEATHER_API_KEY="tähän_weather_api_key"
 
 
