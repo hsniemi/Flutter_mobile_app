@@ -303,7 +303,6 @@ class _PickableListViewState extends State<PickableListView> {
     Navigator.pop(context);
   }
 
-  //Kutsutaan provider-luokan metodia alkion poistamiseksi listasta.
   void _deleteItem(Pickable item) {
     Provider.of<PickableListProvider>(context, listen: false)
         .removePickableListItem(item);
