@@ -32,11 +32,8 @@ Painamalla sivuvalikossa Omat keräilypaikat painiketta käyttäjä voi tarkaste
 ### Tietokanta
 Sovelluksessa käytetään SQLite-tietokantaa Flutterin sqflite-paketin avulla. Tietokantaan luodaan neljä taulua: pickable-taulu sisältää keräilykohteet, history-taulu sisältää keräilytapahtumat, place-taulu sisältää keräilypaikat ja city-taulussa pidetään muistissa säänäkymässä viimeksi haettu paikka.
 
-<<<<<<< HEAD
 ![Taulut](images/tietokanta_flutter_projekti.png)
 
-=======
->>>>>>> main
 ### Käyttöönotto
 Ajaaksesi sovellusta emulaattorissa tai laitteessa kloonaa repositorio ja lataa projektiin tarvittavat paketit ajamalla terminaalissa komento flutter pub get.
 
