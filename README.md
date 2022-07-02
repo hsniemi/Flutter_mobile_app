@@ -32,15 +32,18 @@ Painamalla sivuvalikossa Omat keräilypaikat painiketta käyttäjä voi tarkaste
 ### Tietokanta
 Sovelluksessa käytetään SQLite-tietokantaa Flutterin sqflite-paketin avulla. Tietokantaan luodaan neljä taulua: pickable-taulu sisältää keräilykohteet, history-taulu sisältää keräilytapahtumat, place-taulu sisältää keräilypaikat ja city-taulussa pidetään muistissa säänäkymässä viimeksi haettu paikka.
 
+<<<<<<< HEAD
 ![Taulut](images/tietokanta_flutter_projekti.png)
 
+=======
+>>>>>>> main
 ### Käyttöönotto
 Ajaaksesi sovellusta emulaattorissa tai laitteessa kloonaa repositorio ja lataa projektiin tarvittavat paketit ajamalla terminaalissa komento flutter pub get.
 
 Jotta sovelluksessa voi käyttää paikannusominaisuuksia täytyy projektiin lisätä Maps API Key, jota varten täytyy luoda tili Google maps platform -palveluun (https://mapsplatform.google.com/). Säätietojen näyttämistä varten täytyy lisätä api-avain, jonka saa luomalla tilin Weather API -palveluun (https://www.weatherapi.com/).
 
-Luo projektikansion juureen tiedosto nimeltä .env ja lisätä siihen api-avaimet seuraavalla tavalla:
-API_KEY=tähän_google_api_key
+Luo projektikansion juureen tiedosto nimeltä .env ja lisää siihen api-avaimet seuraavalla tavalla:
+API_KEY=tähän_google_api_key  
 WEATHER_API_KEY="tähän_weather_api_key"
 
 
