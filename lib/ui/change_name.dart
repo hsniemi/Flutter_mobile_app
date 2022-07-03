@@ -8,7 +8,7 @@ import '../providers/pickable_list_provider.dart';
 import '../themes/custom_theme.dart';
 
 /*
-This class creates a view for editing name and unit of an item.
+This class creates a view in a modal bottom sheet for editing name and unit of an item.
 */
 
 class ChangeName extends StatefulWidget {
@@ -32,7 +32,7 @@ class _ChangeNameState extends State<ChangeName> {
 
   void _submitName() async {
     //Collect the new name entered.
-    final enteredName = _inputController.text;
+    String enteredName = _inputController.text;
 
     //Set _nameValid to true before comparing the new name
     //to the other ones in the list.
@@ -40,8 +40,12 @@ class _ChangeNameState extends State<ChangeName> {
       _nameValid = true;
     });
 
-    //Go through the list to make sure new name isn't already given to another item.
-    _validateName(enteredName, widget.list, widget.index);
+    if (enteredName.isEmpty) {
+      enteredName = widget.list[widget.index].name;
+    } else {
+      //Go through the list to make sure new name isn't already given to another item.
+      _validateName(enteredName, widget.list, widget.index);
+    }
 
     //If the new name is valid, update it to database,
     //save it to the list of Pickables and notify listeners.
@@ -70,6 +74,7 @@ class _ChangeNameState extends State<ChangeName> {
           TextField(
             decoration: InputDecoration(
               hintText: widget.list[widget.index].name,
+              hintStyle: CustomInputTheme.inputTextStyle(),
               enabledBorder: CustomInputTheme.border(),
               focusedBorder: CustomInputTheme.border(width: 2.0),
               errorBorder: CustomInputTheme.border(color: Colors.red),
@@ -168,7 +173,7 @@ class _ChangeNameState extends State<ChangeName> {
 
 //Change the name of the Pickable in provider list.
   void changeName(Pickable item) {
-    context.read<PickableListProvider>().changeName(item);
+    Provider.of<PickableListProvider>(context, listen: false).changeName(item);
 
     //Close ModalBottomSheet.
     Navigator.of(context).pop();
