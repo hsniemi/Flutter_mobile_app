@@ -1,6 +1,6 @@
-# Flutter_mobile_app
+# Keräilijä-mobiilisovellus
 
-Tämä sovellus on osa kesäprojektia, joka on Oulun ammattikorkeakoulun tietotekniikan tutkinto-ohjelman alakohtaista harjoittelua. Tekijä on Henna Niemi. Sovellus on tehty käyttäen Flutter-sovelluskehystä ja se on tarkoitettu apusovellukseksi marjojen, sienien tms. kerääjille. Sovelluksen avulla käyttäjä voi pitää kirjaa keräämästään sadosta, sekä tallettaa omia keräilypaikkoja ja tarkastella niitä kartalla. Lisäksi käyttäjä voi hakea säätietoja.
+Tämä sovellus on osa kesäprojektia, joka on Oulun ammattikorkeakoulun tietotekniikan tutkinto-ohjelman alakohtaista harjoittelua. Tekijä on Henna Niemi. Sovelluksen lähdekoodi on projektin lib-kansiossa. Sovellus on tehty käyttäen Flutter-sovelluskehystä ja se on tarkoitettu apusovellukseksi marjojen, sienien tms. kerääjille. Sovelluksen avulla käyttäjä voi pitää kirjaa keräämästään sadosta, sekä tallettaa omia keräilypaikkoja ja tarkastella niitä kartalla. Lisäksi käyttäjä voi hakea säätietoja.
 
 Sovelluksen aloitusnäkymä on Omat keräilykohteet -näkymä. Siinä näytetään käyttäjän luomat keräilykohteet kortteina, joissa on kohteen nimi ja siihen mennessä kerätty yhteismäärä. Käyttäjä voi poistaa kohteen painamalla roskakorikuvaketta kortin vasemmassa yläkulmassa.
 
@@ -23,19 +23,23 @@ Painamalla Säätiedot-painiketta sivuvalikossa, avautuu Sää-näkymä, jossa k
 
 ![sivuvalikko](images/sivuvalikko.png)    ![Sää](images/saa.png)
 
-Painamalla sivuvalikossa Sijaintipainiketta avautuu karttanäkymä, jossa näytetään käyttäjän sijainti kartalla. Karttanäkymä ja sijainnin seuranta on toteutettu käyttäen Google Maps -palvelua. Sijaintisi-näkymässä käyttäjä voi tallentaa sijaintitietonsa antamalla otsikon, joka on pakollinen kenttä, sekä halutessaan kuvauksen sijaintitiedolle ja painamalla Tallenna paikkatieto -painiketta. Paikkatiedon otsikko, kuvaus ja koordinaatit tallennetaan laitteen muistiin SQLite-tietokantaan. 
+Painamalla sivuvalikossa Sijaintipainiketta avautuu karttanäkymä, jossa näytetään käyttäjän sijainti kartalla. Karttanäkymä ja sijainnin seuranta on toteutettu käyttäen Google Maps -palvelua (https://mapsplatform.google.com/). Sijaintisi-näkymässä käyttäjä voi tallentaa sijaintitietonsa antamalla otsikon, joka on pakollinen kenttä, sekä halutessaan kuvauksen sijaintitiedolle ja painamalla Tallenna paikkatieto -painiketta. Paikkatiedon otsikko, kuvaus ja koordinaatit tallennetaan laitteen muistiin SQLite-tietokantaan. 
 
 Painamalla sivuvalikossa Omat keräilypaikat painiketta käyttäjä voi tarkastella tallentamiaan paikkatietoja. Omat keräilypaikat -näkymässä on lista tallennetuista paikoista. Paikkatiedon voi poistaa painamalla roskakorikuvaketta. Painamalla karttakuvaketta avautuu karttanäkymä, jossa näytetään tallennettu paikka kartalla, sekä käyttäjän sijainti kartalla.
 
 ![paikat](images/paikat_sivut.png)
 
+### Tietokanta
+Sovelluksessa käytetään SQLite-tietokantaa Flutterin sqflite-paketin avulla. Tietokantaan luodaan neljä taulua: pickable-taulu sisältää keräilykohteet, history-taulu sisältää keräilytapahtumat, place-taulu sisältää keräilypaikat ja city-taulussa pidetään muistissa säänäkymässä viimeksi haettu paikka.
+
+![Taulut](images/tietokanta_flutter_projekti.png)
 
 ### Käyttöönotto
 Ajaaksesi sovellusta emulaattorissa tai laitteessa kloonaa repositorio ja lataa projektiin tarvittavat paketit ajamalla terminaalissa komento flutter pub get.
 
 Jotta sovelluksessa voi käyttää paikannusominaisuuksia täytyy projektiin lisätä Maps API Key, jota varten täytyy luoda tili Google maps platform -palveluun (https://mapsplatform.google.com/). Säätietojen näyttämistä varten täytyy lisätä api-avain, jonka saa luomalla tilin Weather API -palveluun (https://www.weatherapi.com/).
 
-Luo projektikansion juureen tiedosto nimeltä .env ja lisää siihen api-avaimet seuraavalla tavalla:
+Luo projektikansion juureen tiedosto nimeltä .env ja lisää siihen api-avaimet seuraavalla tavalla:  
 API_KEY=tähän_google_api_key  
 WEATHER_API_KEY="tähän_weather_api_key"
 
