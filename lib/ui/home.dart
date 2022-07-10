@@ -63,10 +63,6 @@ class _PickableListViewState extends State<PickableListView> {
 
   @override
   Widget build(BuildContext context) {
-    List<Pickable> pickableItemsList =
-        Provider.of<PickableListProvider>(context).pickableList;
-
-    debugPrint('Provider.of test $pickableItemsList');
     final theme = Theme.of(context);
     return Scaffold(
       drawer: Drawer(
