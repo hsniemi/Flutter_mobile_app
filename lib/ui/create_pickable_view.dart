@@ -76,7 +76,7 @@ class _CreatePickableViewState extends State<CreatePickableView> {
                       Container(
                         height: 90,
                         padding: const EdgeInsets.only(top: 20.0),
-                        child: inputTextField("Kerätty määrä", true, "amount",
+                        child: inputTextField("Kerätty määrä", false, "amount",
                             TextInputType.number, "0.0", 1),
                       ),
                       Container(
