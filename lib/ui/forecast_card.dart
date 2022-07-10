@@ -8,9 +8,11 @@ import '../util/weather_util.dart';
 Widget forecastCard(AsyncSnapshot<WeatherModel> snapshot, index, context) {
   var forecastList = snapshot.data!.forecast!.forecastday;
   var dayOfWeek = "";
-  var fullDate = WeatherUtil.getFormattedDate(
-      DateTime.fromMillisecondsSinceEpoch(
-          forecastList![index].dateEpoch! * 1000));
+  var fullDate = "";
+  if (forecastList![index].dateEpoch != null) {
+    fullDate = WeatherUtil.getFormattedDate(DateTime.fromMillisecondsSinceEpoch(
+        forecastList[index].dateEpoch! * 1000));
+  }
 
   dayOfWeek = fullDate.split(" ")[0];
 
