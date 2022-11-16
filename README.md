@@ -34,7 +34,7 @@ Sovelluksessa käytetään SQLite-tietokantaa Flutterin sqflite-paketin avulla. 
 
 ![Taulut](images/tietokanta_flutter_projekti.png)
 
-### Käyttöönotto
+### Sovelluksen ajaminen emulaattorissa tai laitteessa
 Ajaaksesi sovellusta emulaattorissa tai laitteessa kloonaa repositorio ja lataa projektiin tarvittavat paketit ajamalla terminaalissa komento flutter pub get.
 
 Jotta sovelluksessa voi käyttää paikannusominaisuuksia täytyy projektiin lisätä Maps API Key, jota varten täytyy luoda tili Google maps platform -palveluun (https://mapsplatform.google.com/). Säätietojen näyttämistä varten täytyy lisätä api-avain, jonka saa luomalla tilin Weather API -palveluun (https://www.weatherapi.com/).
